@@ -1,0 +1,10 @@
+<main *ngIf="group">
+<h2  class="group-name">{{group.name}}</h2>
+<a routerLink="/home">
+    <img src="../../assets/images/return.png" alt="return to home page" class="return-icon" />
+</a>
+<a *ngFor="let team of group.teams" href="" class="team" fxLayoutAlign="center center" >
+    <div class="team-name">{{team.name}}</div>
+    <img src="{{team.flag}}" alt="drapeau de la france" class="team-flag" />
+</a>
+</main>

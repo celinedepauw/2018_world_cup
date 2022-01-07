@@ -1,0 +1,27 @@
+.login-main{
+    background-image: "../../assets/images/background.jpg";
+}
+
+.login-banniere{
+    display: block;
+    margin: auto;
+    width: 700px
+}
+
+.login-form{
+    width: 500px;
+    margin: auto;
+    .mail-input{
+        padding: 10px;
+        margin: 20px;
+    }
+
+    .password-input{
+        padding: 10px;
+        margin: 20px;
+    }
+
+    .login-button{
+        margin: 20px;
+    }
+}

@@ -1,0 +1,28 @@
+.group-name{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.return-icon{
+    width: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.team{
+    margin: auto;
+    width : 500px;
+    text-decoration: none;
+    color: black;
+
+    .team-name{
+        width: 100px;
+        padding: 20px;
+    }
+
+    .team-flag{
+        padding: 20px;
+        width: 50px;
+    }
+}

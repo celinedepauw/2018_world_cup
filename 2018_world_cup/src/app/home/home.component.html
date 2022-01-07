@@ -1,0 +1,35 @@
+<header class="home-header" fxLayoutAlign="start center">
+
+    <mat-menu #appMenu="matMenu">
+        <button mat-menu-item *ngFor = "let group of groups" routerLink="/group/{{group.id}}">{{ group.name }}</button>
+    </mat-menu>
+    <button mat-flat-button color="primary" class="button-menu" [matMenuTriggerFor]="appMenu">Menu</button>
+    
+    <h1 class="home-title" fxFill>Bienvenue !!</h1>
+
+</header>
+
+<mat-card class="article">
+    <img mat-card-image src="../../assets/images/banniere.jpg" class="article-image" />
+    <mat-card-title-group class="article-content" fxLayout="column" fxLayoutAlign="center center" >
+        <mat-card-title class="article-title">Titre de l'article</mat-card-title> 
+        <mat-card-content class="article-description">Description de l'article</mat-card-content>
+    </mat-card-title-group>
+</mat-card>
+
+<mat-card class="article">
+    <img mat-card-image src="../../assets/images/banniere.jpg" class="article-image" />
+    <mat-card-title-group class="article-content" fxLayout="column" fxLayoutAlign="center center" >
+        <mat-card-title class="article-title">Titre de l'article</mat-card-title> 
+        <mat-card-content class="article-description">Description de l'article</mat-card-content>
+    </mat-card-title-group>
+</mat-card>
+
+<mat-card class="article">
+    <img mat-card-image src="../../assets/images/banniere.jpg" class="article-image" />
+    <mat-card-title-group class="article-content" fxLayout="column" fxLayoutAlign="center center" >
+        <mat-card-title class="article-title">Titre de l'article</mat-card-title> 
+        <mat-card-content class="article-description">Description de l'article</mat-card-content>
+    </mat-card-title-group>
+</mat-card>
+

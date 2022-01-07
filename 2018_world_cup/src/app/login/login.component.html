@@ -1,0 +1,21 @@
+<div class="login-main">
+    <img class="login-banniere" src="../../assets/images/banniere.jpg" alt="bannière" />
+    <form class="login-form" fxLayout="column" fxLayoutAlign="center" (ngSubmit)="onSubmit()">
+        <input class="mail-input" placeholder="Email" name="mail" />
+        <input class="password-input" placeholder="Password" name="password"/>
+        <button type="submit" routerLink="/home" mat-flat-button color="primary" class="login-button" >Connexion</button>
+    </form>
+</div>
+
+<!--
+<div class="login-main">
+    <img class="login-banniere" src="../../assets/images/banniere.jpg" alt="bannière" />
+    <form #userForm="ngForm" class="login-form" fxLayout="column" fxLayoutAlign="center" (ngSubmit)="onSubmit(userForm.value)">
+        <input class="mail-input" type="text" placeholder="Email" name="mail" ngModel />
+        <input class="password-input" type="text" placeholder="Password" name="password" ngModel/>
+        <button type="submit" routerLink="/home" mat-flat-button color="primary" class="login-button" >Connexion</button>
+    </form>
+</div>
+-->
+
+                                                   
