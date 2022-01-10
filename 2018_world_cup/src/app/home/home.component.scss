@@ -1,9 +1,4 @@
 .home-header{
-
-    .button-menu{
-      margin-left: 20px;
-    }
-    
     .home-title{
         text-align: center;
         margin-top: 20px;
@@ -11,25 +6,31 @@
     }
 }
 
+.button-menu{
+    margin-left: 20px;
+    min-width: 100px;
+}
+
 .article{
-    width: 500px;
+    width: 700px;
     margin: 20px auto;
+    padding: 0;
     border: 1px solid black;
 
     .article-image{
-        width: 170px;
-        float: left;
+        margin: 0;
+       object-fit: scale-down;
     }
 
     .article-content{
-        
+        padding: 10px;
 
         .article-title{
 
         }
 
         .article-description{
-           
+           text-align: justify;
         }
 
     }

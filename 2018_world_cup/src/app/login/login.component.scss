@@ -1,16 +1,19 @@
-.login-main{
-    background-image: "../../assets/images/background.jpg";
+.login-main {
+    //height: 100vh;
+    //width: 100vw;
+    background-image: url('../../assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .login-banniere{
-    display: block;
-    margin: auto;
-    width: 700px
+    width: 700px;
+    height: 20%;
 }
 
 .login-form{
     width: 500px;
-    margin: auto;
+
     .input-login{
         padding: 10px;
         margin: 20px;

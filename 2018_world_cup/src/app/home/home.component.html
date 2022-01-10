@@ -3,33 +3,39 @@
     <mat-menu #appMenu="matMenu">
         <button mat-menu-item *ngFor = "let group of groups" routerLink="/group/{{group.id}}">{{ group.name }}</button>
     </mat-menu>
-    <button mat-flat-button color="primary" class="button-menu" [matMenuTriggerFor]="appMenu">Menu</button>
+    <button mat-raised-button color="primary" class="button-menu" [matMenuTriggerFor]="appMenu">Groupes</button>
     
     <h1 class="home-title" fxFill>Bienvenue !!</h1>
 
 </header>
 
-<mat-card class="article">
-    <img mat-card-image src="../../assets/images/banniere.jpg" class="article-image" />
-    <mat-card-title-group class="article-content" fxLayout="column" fxLayoutAlign="center center" >
+<mat-card class="article" fxLayout="row">
+    <img mat-card-image src="assets/images/banniere.jpg" class="article-image" fxFlex="30"/>
+    <div class="article-content" fxLayout="column" fxLayoutAlign="center center" fxFlex="fill">
         <mat-card-title class="article-title">Titre de l'article</mat-card-title> 
-        <mat-card-content class="article-description">Description de l'article</mat-card-content>
-    </mat-card-title-group>
+        <mat-card-content class="article-description">Lorem ipsum dolor sit amet. Est illum repellat id inventore reprehenderit est dolor quibusdam aut minus veniam et sunt omnis et quae consequatur et enim illo. Est accusamus eaque qui optio eius qui voluptatum dolorum. Ea facilis commodi cum ipsam iure sit aliquam quod ex sequi fuga qui asperiores eveniet.
+
+            Vel ipsam assumenda et corrupti expedita ut explicabo voluptates. Sit facilis totam aut rerum consequatur sit omnis commodi est galisum asperiores est ipsum esse At eaque voluptatum. Aut aliquam nisi sed obcaecati corporis ut eveniet velit. Est possimus voluptatem qui reprehenderit nesciunt est excepturi omnis rem assumenda cupiditate vel quisquam omnis et culpa laborum.
+            
+            Est consequatur dolores et quisquam consequatur aut nemo adipisci ut ipsam numquam? Et magnam alias non odit fuga ad impedit fugit et distinctio aperiam et illum quidem. Sit pariatur error ad odit galisum qui optio asperiores.</mat-card-content>
+    </div>
 </mat-card>
 
-<mat-card class="article">
-    <img mat-card-image src="../../assets/images/banniere.jpg" class="article-image" />
-    <mat-card-title-group class="article-content" fxLayout="column" fxLayoutAlign="center center" >
+<mat-card class="article" fxLayout="row">
+    <img mat-card-image src="assets/images/banniere.jpg" class="article-image" fxFlex="30"/>
+    <div class="article-content" fxLayout="column" fxLayoutAlign="center center" fxFlex="fill">
         <mat-card-title class="article-title">Titre de l'article</mat-card-title> 
         <mat-card-content class="article-description">Description de l'article</mat-card-content>
-    </mat-card-title-group>
+    </div>
 </mat-card>
 
-<mat-card class="article">
-    <img mat-card-image src="../../assets/images/banniere.jpg" class="article-image" />
-    <mat-card-title-group class="article-content" fxLayout="column" fxLayoutAlign="center center" >
+<mat-card class="article" fxLayout="row">
+    <img mat-card-image src="assets/images/banniere.jpg" class="article-image" fxFlex="30"/>
+    <div class="article-content" fxLayout="column" fxLayoutAlign="center center" fxFlex="fill">
         <mat-card-title class="article-title">Titre de l'article</mat-card-title> 
         <mat-card-content class="article-description">Description de l'article</mat-card-content>
-    </mat-card-title-group>
+    </div>
 </mat-card>
+
+
 
