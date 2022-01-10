@@ -1,39 +1,22 @@
-<h2 class="team-name" fxLayoutAlign="center center">France
-    <img class="team-flag" src="https://cdn.countryflags.com/thumbs/france/flag-800.png" alt="drapeau de la France"/>
-</h2>
-<a href="">
-    <img src="../../assets/images/return.png" alt="return to home page" class="return-icon" />
-</a>
+<main *ngIf="team">
+    <h2 class="team-name" fxLayoutAlign="center center">{{team.name}}
+        <img class="team-flag" src="{{team.flag}}" alt="drapeau de la France"/>
+    </h2>
+    <a routerLink="/group/{{groupId}}">
+        <img src="../../assets/images/return.png" alt="return to home page" class="return-icon" />
+    </a>
+    
+    <table class="team-table">
+        <tr>
+            <th>Joueur</th>
+            <th>Poste</th>
+            <th>Equipe championnat</th>
+        </tr>
+        <tr *ngFor="let player of team.players">
+            <td class="table-cell">{{player.firstname}} {{player.lastname}}</td>
+            <td class="table-cell">{{player.job}}</td>
+            <td class="table-cell">{{player.club}}</td>
+        </tr>
+    </table>
+</main>
 
-<table class="team-table">
-    <tr>
-        <th>Joueur</th>
-        <th>Poste</th>
-        <th>Equipe championnat</th>
-    </tr>
-    <tr>
-        <td class="table-cell">Hugo Loris</td>
-        <td class="table-cell">Gardien</td>
-        <td class="table-cell">Manchester United</td>
-    </tr>
-    <tr>
-        <td class="table-cell">Hugo Loris</td>
-        <td class="table-cell">Gardien</td>
-        <td class="table-cell">Manchester United</td>
-    </tr>
-    <tr>
-        <td class="table-cell">Hugo Loris</td>
-        <td class="table-cell">Gardien</td>
-        <td class="table-cell">Manchester United</td>
-    </tr>
-    <tr>
-        <td class="table-cell">Hugo Loris</td>
-        <td class="table-cell">Gardien</td>
-        <td class="table-cell">Manchester United</td>
-    </tr>
-    <tr>
-        <td class="table-cell">Hugo Loris</td>
-        <td class="table-cell">Gardien</td>
-        <td class="table-cell">Manchester United</td>
-    </tr>
-</table>
