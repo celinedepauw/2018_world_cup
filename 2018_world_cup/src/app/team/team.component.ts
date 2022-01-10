@@ -24,7 +24,7 @@ export class TeamComponent implements OnInit {
     if (routeParams.get('groupId') && Number(routeParams.get('groupId'))) {  // if groupId est bien passé en paramètre et groupId peut bien être converti en Number
       this.groupId = Number(routeParams.get('groupId'));
       if (this.groupId) {  // if groupId existe
-        if(routeParams.get('teamId') && Number(routeParams.get('teamId'))) { // si teamId est en param et que peut être converti en nuber
+        if(routeParams.get('teamId') && Number(routeParams.get('teamId'))) { // si teamId est en param et que peut être converti en number
           this.teamId = Number(routeParams.get('teamId'));
           if(this.teamId) {
             groups.forEach(group => {
@@ -33,13 +33,13 @@ export class TeamComponent implements OnInit {
               }
             });
           } else { // si teamId n'existe pas
-            this.router.navigateByUrl('/group/1')
+            this.router.navigateByUrl('/home')
           }
         } else {
-          this.router.navigateByUrl('/group/1')
+          this.router.navigateByUrl('/home')
         }
       } else { // si groupId n'existe pas
-        this.router.navigateByUrl('/group/1')
+        this.router.navigateByUrl('/home')
       }
     }     
 
