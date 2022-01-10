@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,39 +9,24 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
- loginForm = new FormGroup({
-   mail: new FormControl(''),
-   password: new FormControl(''),
- })
- 
-
- /*
- onSubmit(value: string){
-   console.log(value)
- }
- */
-
-//myform: FormGroup;
-
-/*loginForm = this.formBuilder.group({
-    email: '',
-    password:''
-})*/
-
- onSubmit(){
-  console.log("soumission formulaire")
- }
+email: string = '';
+password: string = '';
 
   constructor(
-   //private formBuilder : FormBuilder
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-   /* this.myform = this.formBuilder.group({
-      email: '',
-      password:''
-    })*/
     
   }
 
+  onSubmit() {
+    if (this.email !== 'nacer@devid.com') {
+      alert('email incorrect')
+    } else if (this.password !== 'FutbalL2018') {
+      alert('mot de passe incorrect')
+    } else {
+      this.router.navigateByUrl('/home');
+    }
+  }
 }

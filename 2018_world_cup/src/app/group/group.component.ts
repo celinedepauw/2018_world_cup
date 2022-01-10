@@ -22,7 +22,7 @@ export class GroupComponent implements OnInit {
     this.group = groups.find(
       (group) => group.id === groupId
     )
-    console.log((this.group)?.name)
+    console.log(this.group!.name)
   }
 
 }
