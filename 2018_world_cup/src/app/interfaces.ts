@@ -756,8 +756,8 @@ export const groups: Group[] = [
         teams:[
             {
                 id: 21,
-                name: "Brésil",
-                flag: "https://cdn.countryflags.com/thumbs/brazil/flag-800.png",
+                name: "Suède",
+                flag: "https://cdn.countryflags.com/thumbs/sweden/flag-800.png",
                 players:[
                     {
                         id: 81,
@@ -791,8 +791,8 @@ export const groups: Group[] = [
             },
             {
                 id: 22,
-                name: "Suisse",
-                flag: "https://cdn.countryflags.com/thumbs/switzerland/flag-800.png",
+                name: "Mexique",
+                flag: "https://cdn.countryflags.com/thumbs/mexico/flag-800.png",
                 players:[
                     {
                         id: 85,
@@ -826,8 +826,8 @@ export const groups: Group[] = [
             },
             {
                 id: 23,
-                name: "Serbie",
-                flag: "https://cdn.countryflags.com/thumbs/serbia/flag-800.png",
+                name: "Corée du Sud",
+                flag: "https://cdn.countryflags.com/thumbs/south-korea/flag-800.png",
                 players:[
                     {
                         id: 89,
@@ -861,8 +861,8 @@ export const groups: Group[] = [
             },
             {
                 id: 24,
-                name: "Costa Rica",
-                flag: "https://cdn.countryflags.com/thumbs/costa-rica/flag-800.png",
+                name: "Allemagne",
+                flag: "https://cdn.countryflags.com/thumbs/germany/flag-800.png",
                 players:[
                     {
                         id: 93,
