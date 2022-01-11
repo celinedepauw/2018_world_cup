@@ -1,8 +1,23 @@
 <div class="login-main" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap=5rem>
     <img fxFlexOffset="3rem" class="login-banniere" src="../../assets/images/banniere.jpg" alt="bannière" />
     <form class="login-form" fxLayout="column" (ngSubmit)="onSubmit()">
+        <input class="input-login" type="text" placeholder="Email" name="email" [formControl]="email"/>
+        <input class="input-login" type="password" placeholder="Password" name="password" [formControl]="password"/>
+        <button type="submit" mat-flat-button color="primary" class="login-button" >Connexion</button>
+    </form>
+</div>
+
+
+
+
+
+<!--VALIDATION FORMULAIRE BASIQUE
+<div class="login-main" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap=5rem>
+    <img fxFlexOffset="3rem" class="login-banniere" src="../../assets/images/banniere.jpg" alt="bannière" />
+    <form class="login-form" fxLayout="column" (ngSubmit)="onSubmit()">
         <input class="input-login" type="text" placeholder="Email" name="mail" [(ngModel)]="email"/>
         <input class="input-login" type="password" placeholder="Password" name="password" [(ngModel)]="password"/>
         <button type="submit" mat-flat-button color="primary" class="login-button" >Connexion</button>
     </form>
 </div>
+-->
