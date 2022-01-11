@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Team, groups} from '../interfaces';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-team',
@@ -15,7 +16,8 @@ export class TeamComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -45,7 +47,7 @@ export class TeamComponent implements OnInit {
   }
 
   goBackToGroup(){
-    this.router.navigateByUrl(`/group/${this.groupId}`)
+    this.location.back()
   }
 
 }
