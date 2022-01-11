@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmailValidator, FormControl, FormGroup } from '@angular/forms';
+import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 // UTILISATION REACTIVE FORM
@@ -25,22 +25,25 @@ loginForm = new FormGroup({
     private router: Router
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {                                                                                        
     
   }
 
+
+
   onSubmit() {
-    if (this.loginForm.value.email !== 'nacer@devid.com') {
+    console.log(this.loginForm.value.email)
+    /*if (this.loginForm.value.email !== 'nacer@devid.com') {
       alert('email incorrect')
     } else if (this.loginForm.value.password !== 'FutbalL2018') {
       alert('mot de passe incorrect')
     } else {
       this.router.navigateByUrl('/home');
-    }
+    }*/
   }
 }
 
-/* VALIDATION FORMULAIRE BASIQUE
+/* VALIDATION FORMULAIRE BASIQUE SANS REACTIVE FORM
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

@@ -9,6 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule} from '@angular/flex-layout';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -33,7 +35,9 @@ import { TeamComponent } from './team/team.component';
     MatMenuModule,
     MatCardModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

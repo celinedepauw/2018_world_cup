@@ -1,9 +1,17 @@
 <!-- REACTIVE FORM AVEC FORMGROUP-->
 <div class="login-main" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap=5rem>
     <img fxFlexOffset="3rem" class="login-banniere" src="../../assets/images/banniere.jpg" alt="bannière" />
-    <form [formGroup]="loginForm" class="login-form" fxLayout="column" (ngSubmit)="onSubmit()">
-        <input class="input-login" type="text" placeholder="Email" name="email" formControlName="email"/>
-        <input class="input-login" type="password" placeholder="Password" name="password" formControlName="password"/>
+    <form [formGroup]="loginForm" class="login-form" (ngSubmit)="onSubmit()" fxLayout="column">
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput class="login-input" type="text" placeholder="Email" name="email" formControlName="email" required/>
+            <mat-error *ngIf="loginForm.get('email')!.hasError('required')">Veuillez entrer une adresse mail</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput class="login-input" type="password" placeholder="Password" name="password" formControlName="password" required />
+            <mat-error *ngIf="loginForm.get('password')!.hasError('required')">Veuillez entrer un mot de passe</mat-error>
+        </mat-form-field>
         <button type="submit" mat-flat-button color="primary" class="login-button" >Connexion</button>
     </form>
 </div>
