@@ -5,11 +5,13 @@
         <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
             <input matInput class="login-input" type="text" placeholder="Email" name="email" formControlName="email" required/>
+            <mat-hint>Ce champ est requis</mat-hint>
             <mat-error *ngIf="loginForm.get('email')!.hasError('required')">Veuillez entrer une adresse mail</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Mot de passe</mat-label>
             <input matInput class="login-input" type="password" placeholder="Password" name="password" formControlName="password" required />
+            <mat-hint>Ce champ est requis</mat-hint>
             <mat-error *ngIf="loginForm.get('password')!.hasError('required')">Veuillez entrer un mot de passe</mat-error>
         </mat-form-field>
         <button type="submit" mat-flat-button color="primary" class="login-button" >Connexion</button>
