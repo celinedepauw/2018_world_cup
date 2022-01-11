@@ -44,7 +44,7 @@ export class TeamComponent implements OnInit {
     }     
   }
 
-  goBackToComponent(){
+  goBackToGroup(){
     this.router.navigateByUrl(`/group/${this.groupId}`)
   }
 
