@@ -34,4 +34,12 @@ export class GroupComponent implements OnInit {
     }
   }
 
+  goBackHome(){
+    this.router.navigateByUrl('/home');
+  }
+
+  goToTeamComponent(id: number){
+    this.router.navigateByUrl(`/group/${this.groupId}/team/${id}`)
+  }
+
 }

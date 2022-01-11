@@ -42,16 +42,10 @@ export class TeamComponent implements OnInit {
         this.router.navigateByUrl('/home')
       }
     }     
+  }
 
-/*
-    this.groupId = Number(routeParams.get('groupId'));
-    this.teamId = Number(routeParams.get('teamId'));
-    groups.forEach(group => {
-      if(group.id === this.groupId) {
-        this.team = group.teams.find(team => team.id === this.teamId)!;
-      }
-    });*/
-
+  goBackToComponent(){
+    this.router.navigateByUrl(`/group/${this.groupId}`)
   }
 
 }

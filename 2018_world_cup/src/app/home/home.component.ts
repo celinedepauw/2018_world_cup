@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { groups } from '../interfaces';
 
 @Component({
@@ -10,9 +11,14 @@ export class HomeComponent implements OnInit {
 
   groups = groups;
   
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  goToGroupComponent(id: number){
+    this.router.navigateByUrl(`/group/${id}`)
+  }
 }

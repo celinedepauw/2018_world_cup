@@ -29,17 +29,14 @@ loginForm = new FormGroup({
     
   }
 
-
-
   onSubmit() {
-    console.log(this.loginForm.value.email)
-    /*if (this.loginForm.value.email !== 'nacer@devid.com') {
+    if (this.loginForm.value.email !== 'nacer@devid.com') {
       alert('email incorrect')
     } else if (this.loginForm.value.password !== 'FutbalL2018') {
       alert('mot de passe incorrect')
     } else {
       this.router.navigateByUrl('/home');
-    }*/
+    }
   }
 }
 

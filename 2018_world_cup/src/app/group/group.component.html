@@ -1,10 +1,18 @@
 <main *ngIf="group">
 <h2  class="group-name">{{group.name}}</h2>
-<a routerLink="/home">
+<a (click)="goBackHome()">
+    <img src="../../assets/images/return.png" alt="return to home page" class="return-icon" />
+</a>
+<a *ngFor="let team of group.teams" (click)="goToTeamComponent(team.id)" class="team" fxLayoutAlign="center center" >
+    <div class="team-name">{{team.name}}</div>
+    <img src="{{team.flag}}" alt="drapeau de la france" class="team-flag" />
+</a>
+<!-- Routing avec routerLink
+    <a routerLink="/home">
     <img src="../../assets/images/return.png" alt="return to home page" class="return-icon" />
 </a>
 <a *ngFor="let team of group.teams" routerLink="/group/{{groupId}}/team/{{team.id}}" class="team" fxLayoutAlign="center center" >
     <div class="team-name">{{team.name}}</div>
     <img src="{{team.flag}}" alt="drapeau de la france" class="team-flag" />
-</a>
+</a>-->
 </main>
