@@ -13,4 +13,10 @@ export class WorldCupService {
   getAllGroups(): Observable<Group[]>{
     return of(groups);
   }
+
+  getGroup(idGroup: number): Observable<Group>{
+    const group: Group = groups.find((group: Group) => group.id === idGroup)!
+    return of(group)
+  }
+
 }

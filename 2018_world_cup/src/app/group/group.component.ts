@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Group, groups } from '../interfaces';
+import { WorldCupService } from '../world-cup.service';
 
 @Component({
   selector: 'app-group',
@@ -14,7 +15,8 @@ export class GroupComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private worldCupService: WorldCupService
   ) { }
 
   ngOnInit(): void {
@@ -22,7 +24,9 @@ export class GroupComponent implements OnInit {
     if (routeParams.get('groupId') && Number(routeParams.get('groupId'))) {  // if groupId est bien passé en paramètre et groupId peut bien être converti en Number
       this.groupId = Number(routeParams.get('groupId'));
       if (this.groupId) {  // if groupId existe
-        this.group = groups.find((group: Group) => group.id === this.groupId)!; // CAS OU ON A BIEN UN GROUPID ET UN GROUPE QUI EXISTENT
+        this.worldCupService.getGroup(this.groupId) // CAS OU ON A BIEN UN GROUPID ET UN GROUPE QUI EXISTENT
+        .subscribe(group => this.group = group)
+        /* sans le service : this.group = groups.find((group: Group) => group.id === this.groupId)!;  */
         if (!this.group) {  // if aucun group ne correspond au groupId
           this.router.navigateByUrl('/home');
         }
