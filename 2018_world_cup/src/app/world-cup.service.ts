@@ -19,4 +19,9 @@ export class WorldCupService {
     return of(group)
   }
 
+  getTeam(idGroup: number, idTeam: number): Observable<Team>{
+    const group: Group = groups.find((group: Group) => group.id === idGroup)!
+    const team: Team = group.teams.find((team: Team) => team.id === idTeam)!
+    return of(team)
+  }
 }

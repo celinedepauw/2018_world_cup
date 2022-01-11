@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Group, groups } from '../interfaces';
+import { Group } from '../interfaces';
 import { WorldCupService } from '../world-cup.service';
 
 @Component({
@@ -25,7 +25,7 @@ export class GroupComponent implements OnInit {
       this.groupId = Number(routeParams.get('groupId'));
       if (this.groupId) {  // if groupId existe
         this.worldCupService.getGroup(this.groupId) // CAS OU ON A BIEN UN GROUPID ET UN GROUPE QUI EXISTENT
-        .subscribe(group => this.group = group)
+          .subscribe(group => this.group = group)
         /* sans le service : this.group = groups.find((group: Group) => group.id === this.groupId)!;  */
         if (!this.group) {  // if aucun group ne correspond au groupId
           this.router.navigateByUrl('/home');

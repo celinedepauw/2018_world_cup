@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Team, groups} from '../interfaces';
+import { Team } from '../interfaces';
+import { WorldCupService } from '../world-cup.service';
 
 @Component({
   selector: 'app-team',
@@ -15,7 +16,8 @@ export class TeamComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private worldCupService: WorldCupService
   ) { }
 
   ngOnInit(): void {
@@ -27,11 +29,14 @@ export class TeamComponent implements OnInit {
         if(routeParams.get('teamId') && Number(routeParams.get('teamId'))) { // si teamId est en param et que peut être converti en number
           this.teamId = Number(routeParams.get('teamId'));
           if(this.teamId) {
+            this.worldCupService.getTeam(this.groupId, this.teamId)
+              .subscribe(team => this.team = team)
+            /* SANS LE SERVICE :
             groups.forEach(group => {
               if(group.id === this.groupId) {
                 this.team = group.teams.find(team => team.id === this.teamId)!;
               }
-            });
+            });*/
           } else { // si teamId n'existe pas
             this.router.navigateByUrl('/home')
           }
