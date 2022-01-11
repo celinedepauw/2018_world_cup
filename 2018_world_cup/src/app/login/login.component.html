@@ -4,15 +4,15 @@
     <form [formGroup]="loginForm" class="login-form" (ngSubmit)="onSubmit()" fxLayout="column">
         <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
-            <input matInput class="login-input" type="text" placeholder="Email" name="email" formControlName="email" required/>
-            <mat-hint>Ce champ est requis</mat-hint>
+            <input matInput class="login-input" type="text" placeholder="Email" formControlName="email"/>
             <mat-error *ngIf="loginForm.get('email')!.hasError('required')">Veuillez entrer une adresse mail</mat-error>
+            <mat-error *ngIf="loginForm.get('email')!.hasError('pattern')">L'adresse mail n'est pas valide</mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Mot de passe</mat-label>
-            <input matInput class="login-input" type="password" placeholder="Password" name="password" formControlName="password" required />
-            <mat-hint>Ce champ est requis</mat-hint>
+            <input matInput class="login-input" type="password" placeholder="Password" formControlName="password"/>         
             <mat-error *ngIf="loginForm.get('password')!.hasError('required')">Veuillez entrer un mot de passe</mat-error>
+            <mat-error *ngIf="loginForm.get('password')!.hasError('pattern')">Le mot de passe n'est pas valide</mat-error>
         </mat-form-field>
         <button type="submit" mat-flat-button color="primary" class="login-button" >Connexion</button>
     </form>

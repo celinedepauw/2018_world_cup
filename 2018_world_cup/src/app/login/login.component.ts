@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmailValidator, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 // UTILISATION REACTIVE FORM
@@ -16,25 +16,21 @@ password = new FormControl('');
 */
 
 // Avec FormGroup
-loginForm = new FormGroup({
-  email: new FormControl(''),
-  password: new FormControl('')
-})
+loginForm!: FormGroup;
 
   constructor(
     private router: Router
   ) { }
 
   ngOnInit(): void {                                                                                        
-    
+    this.loginForm = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.pattern('nacer@devid.com')]),
+      password: new FormControl('', [Validators.required, Validators.pattern('FutbalL2018')])
+    })
   }
 
   onSubmit() {
-    if (this.loginForm.value.email !== 'nacer@devid.com') {
-      alert('email incorrect')
-    } else if (this.loginForm.value.password !== 'FutbalL2018') {
-      alert('mot de passe incorrect')
-    } else {
+    if(this.loginForm.value.email == 'nacer@devid.com' && this.loginForm.value.password == 'FutbalL2018') {
       this.router.navigateByUrl('/home');
     }
   }

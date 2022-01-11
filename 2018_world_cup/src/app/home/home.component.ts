@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { groups } from '../interfaces';
+import { Group } from '../interfaces';
+import { WorldCupService } from '../world-cup.service';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +10,16 @@ import { groups } from '../interfaces';
 })
 export class HomeComponent implements OnInit {
 
-  groups = groups;
+  groups: Group[] = [];
   
   constructor(
+    private worldCupService: WorldCupService,
     private router: Router
   ) { }
 
   ngOnInit(): void {
+    this.worldCupService.getAllGroups()
+    .subscribe(groups => this.groups = groups)
   }
 
   goToGroupComponent(id: number){
